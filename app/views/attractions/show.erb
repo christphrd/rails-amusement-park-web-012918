@@ -1,0 +1,11 @@
+<h1><%= @attraction.name %></h1>
+
+<%=form_tag rides_path, method: 'post' do %>
+  <%= hidden_field_tag :user_id, @user.id %>
+  <%= hidden_field_tag :attraction_id, @attraction.id %>
+<%=submit_tag "Go on this ride" %>
+<% end %>
+<!-- <%= button_to "Go on this ride", new_ride_path, method: 'get'%> -->
+<!-- Click on button. Then go to User Controller. Method update tickets for user/patch.  -->
+<!-- if button gets clicked -->
+<!-- @user.update(tickets: @user.tickets - @attraction.tickets) -->
